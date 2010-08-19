@@ -1,0 +1,29 @@
+---
+abstract: 'Functions For Astromical Calendars'
+build_requires:
+  Devel::PPPort: 3.19
+  ExtUtils::MakeMaker: 6.42
+  ExtUtils::ParseXS: 2.21
+configure_requires:
+  Devel::PPPort: 3.19
+  ExtUtils::MakeMaker: 6.42
+distribution_type: module
+generated_by: 'Module::Install version 1.00'
+license: unknown
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: DateTime-Astro
+no_index:
+  directory:
+    - inc
+    - t
+    - xt
+requires:
+  DateTime: 0
+  DateTime::Set: 0
+  Exporter: 5.57
+  XSLoader: 0.1
+resources:
+  repository: git://github.com/lestrrat/DateTime-Astro.git
+version: 0.99999_01
