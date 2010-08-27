@@ -37,6 +37,7 @@ xs/dt_astro_solar_term.c
 xs/typemap
 xt/001_moment.t
 xt/005_nth_new_moon.t
+xt/100_slow_moon.t
 xt/999_leak.t
 xt/999_pod-coverage.t
 xt/999_pod.t

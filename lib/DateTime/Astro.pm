@@ -108,9 +108,7 @@ There /is/ a HALF BAKED Pure Perl implmentation bundled with this distribution, 
 
 As such, you HAVE to have MPFR installed correctly in your system. Please consult your local package manager, or http://mpfr.org
 
-=head2 Documentation Missing
-
-Yes, I know.
+Patches to make the pure perl version work better is always welcome.
 
 =head1 FUNCTIONS
 
@@ -219,5 +217,15 @@ Mean time (in moment) between new moons
 =head2 MEAN_TROPICAL_YEAR
 
 Mean time (in moment) between a full year (time for the Earth to go around the sun)
+
+=head1 LICENSE
+
+This library is available under Artistic License v2, and is:
+
+    Copyright (C) 2010  Daisuke Maki C<< <daisuke@endeworks.jp> >>
+
+=head1 AUTHOR
+
+Daisuke Maki C<< <daisuke@endeworks.jp> >>
 
 =cut

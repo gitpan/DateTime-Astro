@@ -1,5 +1,7 @@
 ---
 abstract: 'Functions For Astromical Calendars'
+author:
+  - 'Daisuke Maki C<< <daisuke@endeworks.jp> >>'
 build_requires:
   Devel::PPPort: 3.19
   ExtUtils::MakeMaker: 6.42
@@ -9,7 +11,7 @@ configure_requires:
   ExtUtils::MakeMaker: 6.42
 distribution_type: module
 generated_by: 'Module::Install version 1.00'
-license: unknown
+license: artistic_2
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
@@ -25,5 +27,6 @@ requires:
   Exporter: 5.57
   XSLoader: 0.1
 resources:
+  license: http://opensource.org/licenses/artistic-license-2.0.php
   repository: git://github.com/lestrrat/DateTime-Astro.git
-version: 0.99999_01
+version: 0.99999
