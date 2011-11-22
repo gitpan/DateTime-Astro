@@ -1,6 +1,11 @@
 Changes
 =======
 
+0.99999_03 22 Nov 2011
+    * Made xt/101_solar_terms.t's failing tests TODO. If you know how to
+      fix them, please send me patches.
+    * use xshelper's STATIC_INLINE
+
 0.99999_02 27 Aug 2010
     * Fixed the adjustment on new moons so that it's done in one step
       instead of looping by adjusting fixed amounts. This caused a

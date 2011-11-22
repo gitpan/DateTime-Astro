@@ -13,6 +13,7 @@ requires 'Exporter' => '5.57';
 cc_warnings;
 cc_libs 'mpfr';
 cc_src_paths 'xs';
+use_xshelper '-clean';
 author_tests 'xt';
 auto_set_repository;
 

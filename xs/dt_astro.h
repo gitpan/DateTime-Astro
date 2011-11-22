@@ -7,6 +7,7 @@
 #define NEED_sv_2pv_flags
 #include "ppport.h"
 #include "mpfr.h"
+#include "xshelper.h"
 
 #define TRACE 0
 #define SV_TO_MPFR mpfr_t

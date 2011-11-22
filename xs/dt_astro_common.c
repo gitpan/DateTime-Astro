@@ -231,7 +231,7 @@ ymd_seconds_from_moment(mpfr_t *moment, long *y, int *m, int *d, int *s) {
     return 1;
 }
 
-static int
+STATIC_INLINE int
 EC_C(mpfr_t *result, int y) {
     mpfr_set_d(
         *result,
@@ -242,7 +242,7 @@ EC_C(mpfr_t *result, int y) {
     return 1;
 }
 
-static int
+STATIC_INLINE int
 EC2(mpfr_t *correction, mpfr_t *ec_c) {
     mpfr_t a, b, c, d, e, f, g, h;
     mpfr_init_set_d(a, -0.00002, GMP_RNDN);
@@ -267,7 +267,7 @@ EC2(mpfr_t *correction, mpfr_t *ec_c) {
     return 1;
 }
 
-static int
+STATIC_INLINE int
 EC3(mpfr_t *correction, mpfr_t *ec_c) {
     mpfr_t a, b, c, d, e, f, g, h, i, j, k;
     mpfr_init_set_d(a, -0.000009, GMP_RNDN);
@@ -299,7 +299,7 @@ EC3(mpfr_t *correction, mpfr_t *ec_c) {
     return 1;
 }
 
-static int
+STATIC_INLINE int
 EC4(mpfr_t *correction, int year) {
     mpfr_t y, a, b, c, d;
 
@@ -319,7 +319,7 @@ EC4(mpfr_t *correction, int year) {
     return 1;
 }
 
-static int
+STATIC_INLINE int
 EC5(mpfr_t *correction, int year) {
     mpfr_t y, a, b, c;
 
@@ -337,7 +337,7 @@ EC5(mpfr_t *correction, int year) {
     return 1;
 }
 
-static int
+STATIC_INLINE int
 EC6(mpfr_t *correction, int year) {
     mpfr_t x;
 

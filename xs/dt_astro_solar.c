@@ -205,7 +205,7 @@ estimate_prior_solar_longitude(mpfr_t *result, mpfr_t *moment, mpfr_t *phi) {
 
 #define SOLAR_LONGITUDE_ALLOWED_DELTA 0.0000000001
 
-static int
+STATIC_INLINE int
 __solar_longitude_mu(mpfr_t *lo, mpfr_t *hi) {
     int result = 0;
     mpfr_t delta;
@@ -220,7 +220,7 @@ __solar_longitude_mu(mpfr_t *lo, mpfr_t *hi) {
     return result;
 }
 
-static int
+STATIC_INLINE int
 __solar_longitude_phi(mpfr_t *x, void *args, int n_args) {
     int result = 0;
     mpfr_t phi, lon, fullangle;

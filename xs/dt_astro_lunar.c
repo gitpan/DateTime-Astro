@@ -274,7 +274,7 @@ lunar_phase( mpfr_t *result, mpfr_t *moment ) {
     return 1;
 }
 
-static inline void
+STATIC_INLINE void
 adjust_lunar_phase_to_zero(mpfr_t *result) {
     mpfr_t ll, delta;
     int mode = -1;
