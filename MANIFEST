@@ -1,3 +1,4 @@
+Astro.bs
 Changes
 inc/Module/Install.pm
 inc/Module/Install/AuthorTests.pm
@@ -28,16 +29,18 @@ t/006_solar_longitude.t
 t/007_lunar_longitude.t
 t/008_solar_term.t
 t/DateTime/Astro/Test.pm
+t/terms.json
 xs/dt_astro.h
 xs/dt_astro.xs
-xs/dt_astro_common.c
-xs/dt_astro_lunar.c
-xs/dt_astro_solar.c
-xs/dt_astro_solar_term.c
+xs/dt_astro_common.inc
+xs/dt_astro_lunar.inc
+xs/dt_astro_solar.inc
+xs/dt_astro_solar_term.inc
 xs/typemap
 xt/001_moment.t
 xt/005_nth_new_moon.t
 xt/100_slow_moon.t
+xt/101_solar_term.t
 xt/999_leak.t
 xt/999_pod-coverage.t
 xt/999_pod.t

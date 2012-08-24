@@ -32,7 +32,7 @@ BEGIN {
         solar_longitude_after
         solar_longitude_after_from_moment
     );
-    our $VERSION = '0.99999';
+    our $VERSION = '1.00';
 
     my $backend = 'XS';
 
@@ -93,31 +93,14 @@ DateTime::Astro - Functions For Astromical Calendars
 
 =head1 DESCRIPTION
 
-DateTime::Astro implements functions used in astronomical calendars:
-
-=over 4 
-
-=item Solar Longitude
-
-=item Solar Terms
-
-=item Lunar Longitude
-
-=item New Moons
-
-=item ...etc
-
-=back
+DateTime::Astro implements functions used in astronomical calendars, such
+as calculation of lunar longitudea and solar longitude.
 
 This module is best used in environments where a C compiler and the MPFR arbitrary precision math library is installed. It can fallback to using Math::BigInt, but that would pretty much render it useless because of its speed and loss of accuracy that may creep up while doing Perl to C struct conversions.
 
 =head1 DISCLAIMER
 
 This module works, but there are several caveats you should be aware of:
-
-=head2 KNOWN ISSUES
-
-There are several edge cases that the test suite already unveils, current in solar term calculations. only 1% of the dates are affected, so I opted to make them TODO. If you are interested, please see xt/101_solar_term.t. Patches are very much appreciated.
 
 =head2 MPFR Is Required / PurePerl Version Not Functional
 
@@ -126,6 +109,16 @@ There /is/ a HALF BAKED Pure Perl implmentation bundled with this distribution, 
 As such, you HAVE to have MPFR installed correctly in your system. Please consult your local package manager, or http://mpfr.org
 
 Patches to make the pure perl version work better is always welcome.
+
+=head2 17 solar terms are still off by ~ 5 minutes
+
+I've tried very hard to correctly calculate the solar term dates with this
+module, but I still get 17 instances in about 130 years worth of solar terms,
+where the dates are off by an average of about 5 minutes -- and these usually 
+fall at right about midnight, causing day-based comparisons to be off by 1.
+
+I'm sure there's something that's causing a round off somwhere. If you're up
+to it, please see xt/101_solar_terms.t and see if you can fix it for me!
 
 =head1 FUNCTIONS
 
@@ -239,7 +232,7 @@ Mean time (in moment) between a full year (time for the Earth to go around the s
 
 This library is available under Artistic License v2, and is:
 
-    Copyright (C) 2010  Daisuke Maki C<< <daisuke@endeworks.jp> >>
+    Copyright (C) 2012  Daisuke Maki C<< <daisuke@endeworks.jp> >>
 
 =head1 AUTHOR
 
